@@ -42,7 +42,7 @@ def get_current_user(authorization: Optional[str] = Header(None)) -> dict:
     except Exception:
         raise HTTPException(status_code=401, detail="Invalid token")
 
-    import sqlite3
+    from app.core import db_compat as sqlite3
     conn = sqlite3.connect(settings.database_file_path, timeout=30.0)
     conn.row_factory = sqlite3.Row
     user = conn.execute("SELECT * FROM users WHERE id = ?", (user_id,)).fetchone()

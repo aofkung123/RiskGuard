@@ -1,7 +1,7 @@
 """
 Material API — ดึงข้อมูลวัสดุจาก DW&BI ผ่าน RiskGuard DB
 """
-import sqlite3
+from app.core import db_compat as sqlite3
 import os
 from datetime import datetime
 from typing import List, Optional

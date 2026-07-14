@@ -1,7 +1,7 @@
 """
 Dashboard API — ดึงข้อมูลจาก construction_dw.db เพื่อ Contractor BI Dashboard 4 Steps
 """
-import sqlite3
+from app.core import db_compat as sqlite3
 from fastapi import APIRouter, HTTPException, Query, Header
 from app.core.config import settings
 from app.core.security import get_current_user

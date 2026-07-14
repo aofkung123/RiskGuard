@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Depends, Header
 from pydantic import BaseModel
 from typing import Optional
-import sqlite3
+from app.core import db_compat as sqlite3
 from app.core.config import settings
 from app.core.security import get_current_user
 

@@ -11,7 +11,7 @@ APP_DB = settings.database_file_path
 
 
 def get_db():
-    import sqlite3
+    from app.core import db_compat as sqlite3
     conn = sqlite3.connect(APP_DB, timeout=30.0)
     conn.row_factory = sqlite3.Row
     return conn

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, UploadFile, File, Header
 from pydantic import BaseModel
 from typing import Optional
-import sqlite3
+from app.core import db_compat as sqlite3
 import os
 import uuid
 import shutil

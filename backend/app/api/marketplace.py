@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Header
 from pydantic import BaseModel
 from typing import Optional
-import sqlite3
+from app.core import db_compat as sqlite3
 from urllib.parse import urlparse
 from app.core.config import settings
 from app.core.security import get_current_user

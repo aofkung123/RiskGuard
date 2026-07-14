@@ -18,12 +18,13 @@ class Settings(BaseSettings):
     @property
     def database_file_path(self) -> str:
         if not self.DATABASE_URL.startswith("sqlite:///"):
-            raise ValueError("database_file_path is only available for SQLite DATABASE_URL")
+            return "postgresql_active"
         raw_path = self.DATABASE_URL.replace("sqlite:///", "", 1)
         path = Path(raw_path)
         if not path.is_absolute():
             path = BACKEND_ROOT / path
         return str(path.resolve())
+
 
     @property
     def dw_database_file_path(self) -> str:
