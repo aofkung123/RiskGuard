@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-destructive: var(--destructive);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+}
+
+:root {
+  --background: #f6f4ee;
+  --foreground: #23302f;
+  --primary: #0f766e;
+  --primary-foreground: #ffffff;
+  --secondary: #64736f;
+  --secondary-foreground: #ffffff;
+  --accent: #2563eb;
+  --destructive: #dc2626;
+  --card: #fffdf8;
+  --card-foreground: #23302f;
+  --border: #ded9ce;
+}
+
+[data-theme='dark'] {
+  --background: #101614;
+  --foreground: #edf2ef;
+  --primary: #2dd4bf;
+  --primary-foreground: #0f172a;
+  --secondary: #283632;
+  --secondary-foreground: #edf2ef;
+  --accent: #93c5fd;
+  --destructive: #f87171;
+  --card: #151d1a;
+  --card-foreground: #edf2ef;
+  --border: #2b3935;
+}
+
+html {
+  letter-spacing: 0;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-kanit), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-teal-700 text-white font-semibold rounded-lg hover:bg-teal-600 transition-all shadow-lg shadow-teal-900/10 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-white text-slate-700 font-semibold rounded-lg hover:bg-slate-50 transition-all border border-stone-300 active:scale-95 dark:bg-slate-900 dark:text-slate-100 dark:border-slate-700 dark:hover:bg-slate-800;
+  }
+
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Hide scrollbars on category filter bars */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   Fail-safe Theme Overrides (Forced Light Mode Contrast)
+   These rules bypass Tailwind media-query/caching issues in running dev servers.
+   ══════════════════════════════════════════════════════════════════════════════ */
+[data-theme='light'] .dark\:text-slate-100,
+[data-theme='light'] .dark\:text-slate-200,
+[data-theme='light'] .dark\:text-slate-300,
+[data-theme='light'] .dark\:text-slate-400,
+[data-theme='light'] .dark\:text-slate-500 {
+  color: #334155 !important; /* Forces highly readable Slate-700 color */
+}
+
+[data-theme='light'] .dark\:bg-slate-800 {
+  background-color: #f2efe7 !important;
+  color: #23302f !important;
+  border-color: #ded9ce !important;
+}
+
+[data-theme='light'] .dark\:bg-slate-900 {
+  background-color: #f6f4ee !important;
+}
+
+[data-theme='light'] .dark\:hover\:bg-slate-800:hover,
+[data-theme='light'] .dark\:hover\:bg-slate-700:hover {
+  background-color: #ebe7dc !important;
+}

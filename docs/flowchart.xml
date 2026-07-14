@@ -1,0 +1,87 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Flow Connected">
+    <mxGraphModel grid="1" gridSize="10">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Users -->
+        <mxCell id="E" value="Employer" style="ellipse;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="C" value="Contractor" style="ellipse;" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Frontend -->
+        <mxCell id="MP" value="Marketplace" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="80" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="PT" value="Tracking" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="200" width="180" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="D" value="Dashboard" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="320" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Backend -->
+        <mxCell id="API" value="Backend API" style="rounded=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="500" y="180" width="200" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- DB -->
+        <mxCell id="DB" value="App DB" style="shape=cylinder;" vertex="1" parent="1">
+          <mxGeometry x="750" y="120" width="140" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="DW" value="Data Warehouse" style="shape=cylinder;" vertex="1" parent="1">
+          <mxGeometry x="750" y="250" width="140" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Work Flow -->
+        <mxCell id="Upload" value="Upload Evidence" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="450" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="Review" value="Review Work" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="450" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="Decision" value="Approved?" style="rhombus;" vertex="1" parent="1">
+          <mxGeometry x="500" y="550" width="140" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="Pay" value="Payment" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="520" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="Rework" value="Rework" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="620" width="160" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Monitoring -->
+        <mxCell id="Monitor" value="Risk Monitoring" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="500" y="680" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell edge="1" parent="1" source="E" target="MP"/>
+        <mxCell edge="1" parent="1" source="C" target="MP"/>
+
+        <mxCell edge="1" parent="1" source="MP" target="API"/>
+        <mxCell edge="1" parent="1" source="PT" target="API"/>
+        <mxCell edge="1" parent="1" source="D" target="API"/>
+
+        <mxCell edge="1" parent="1" source="API" target="DB"/>
+        <mxCell edge="1" parent="1" source="API" target="DW"/>
+
+        <mxCell edge="1" parent="1" source="C" target="Upload"/>
+        <mxCell edge="1" parent="1" source="Upload" target="Review"/>
+        <mxCell edge="1" parent="1" source="Review" target="Decision"/>
+
+        <mxCell edge="1" parent="1" source="Decision" target="Pay" value="Yes"/>
+        <mxCell edge="1" parent="1" source="Decision" target="Rework" value="No"/>
+        <mxCell edge="1" parent="1" source="Rework" target="Upload"/>
+
+        <mxCell edge="1" parent="1" source="Pay" target="Monitor"/>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

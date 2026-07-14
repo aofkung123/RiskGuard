@@ -1,0 +1,165 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img [ref=e7]
+          - generic [ref=e9]: RiskGuard
+        - generic [ref=e10]:
+          - button "เปลี่ยนเป็นโหมดสว่าง" [ref=e11] [cursor=pointer]:
+            - img [ref=e12]
+          - link "เข้าสู่ระบบ" [ref=e18] [cursor=pointer]:
+            - /url: /login
+          - link "เริ่มต้นใช้งาน" [ref=e19] [cursor=pointer]:
+            - /url: /register
+    - banner [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - img [ref=e23]
+          - generic [ref=e25]: แพลตฟอร์มบริหารความเสี่ยงงานก่อสร้าง
+        - heading "บริหาร ต้นทุนและเวลา ด้วยประสิทธิภาพสูงสุด" [level=1] [ref=e26]:
+          - text: บริหาร ต้นทุนและเวลา
+          - text: ด้วยประสิทธิภาพสูงสุด
+        - paragraph [ref=e27]: ระบบจัดเก็บข้อมูลแบบ Real-time ช่วยผู้รับเหมาและผู้ว่าจ้างเห็นสถานะทางการเงิน พร้อมระบบ Early Warning ประเมินความเบี่ยงเบนของโครงการก่อสร้าง
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - img [ref=e32]
+            - heading "ทางเข้าผู้ว่าจ้าง (Employer)" [level=3] [ref=e34]
+            - paragraph [ref=e35]: สำหรับเจ้าของโครงการหรือผู้จ้างงาน ต้องการควบคุมงบประมาณ ค้นหาผู้รับเหมา และดูแลภาพรวมความปลอดภัยของเงินลงทุน
+            - generic [ref=e36]:
+              - generic [ref=e37]:
+                - img [ref=e38]
+                - generic [ref=e41]: ค้นหาผู้รับเหมาตามจัดอันดับและบริการจริง
+              - generic [ref=e42]:
+                - img [ref=e43]
+                - generic [ref=e46]: แผงควบคุมสถานะโครงการ EVM (CPI/SPI)
+              - generic [ref=e47]:
+                - img [ref=e48]
+                - generic [ref=e51]: ระบบแชทโปร่งใส ส่งพิมพ์เขียว และอนุมัติราคา
+              - generic [ref=e52]:
+                - img [ref=e53]
+                - generic [ref=e56]: ระบบ Early Warning แจ้งเตือนงบบานปลายล่วงหน้า
+            - link "เข้าใช้งานพอร์ทัลผู้ว่าจ้าง" [ref=e57] [cursor=pointer]:
+              - /url: /login
+              - text: เข้าใช้งานพอร์ทัลผู้ว่าจ้าง
+              - img [ref=e58]
+          - generic [ref=e60]:
+            - img [ref=e63]
+            - heading "ทางเข้าผู้รับเหมา (Contractor)" [level=3] [ref=e68]
+            - paragraph [ref=e69]: สำหรับบริษัทรับเหมา ทีมงานวิศวกร หรือช่างอาชีพที่ต้องการประมาณการราคา รายงานสถานะความคืบหน้าโครงการ และส่งใบเสนอราคา
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - img [ref=e72]
+                - generic [ref=e75]: จัดทำใบประมาณราคากลางอ้างอิงจากคลังวัสดุ DW
+              - generic [ref=e76]:
+                - img [ref=e77]
+                - generic [ref=e80]: รายงานสถานะโครงการและรูปภาพรายวัน
+              - generic [ref=e81]:
+                - img [ref=e82]
+                - generic [ref=e85]: วิเคราะห์ส่วนเบี่ยงเบนต้นทุน-เวลาผ่าน CPI/SPI
+              - generic [ref=e86]:
+                - img [ref=e87]
+                - generic [ref=e90]: โปรไฟล์จัดเก็บ Portfolio สร้างความน่าเชื่อถือ
+            - link "เข้าใช้งานพอร์ทัลผู้รับเหมา" [ref=e91] [cursor=pointer]:
+              - /url: /login
+              - text: เข้าใช้งานพอร์ทัลผู้รับเหมา
+              - img [ref=e92]
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - img [ref=e99]
+            - generic [ref=e101]: ปัญหาที่พบบ่อย
+          - heading "โครงการก่อสร้างทั่วไป มักพบปัญหายืดเยื้อ" [level=2] [ref=e102]
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - img [ref=e105]
+            - generic [ref=e108]: คำตอบจาก RiskGuard
+          - heading "วิเคราะห์ ล่วงหน้า ควบคุม ทุกปัจจัยเสี่ยง" [level=2] [ref=e109]
+      - generic [ref=e110]:
+        - generic [ref=e111]:
+          - img [ref=e113]
+          - paragraph [ref=e116]: งานล่าช้าสะสมโดยไม่รู้ตัวจนถึงวันส่งมอบ
+        - generic [ref=e117]:
+          - img [ref=e119]
+          - paragraph [ref=e121]: ดัชนี CPI และ SPI รายงานสถานะความก้าวหน้าโครงการแบบเรียลไทม์
+        - generic [ref=e122]:
+          - img [ref=e124]
+          - paragraph [ref=e126]: งบประมาณบานปลายแบบไม่มีข้อมูลเปรียบเทียบตลาด
+        - generic [ref=e127]:
+          - img [ref=e129]
+          - paragraph [ref=e133]: Data Warehouse ดึงราคากลางเปรียบเทียบตลาดทันที
+        - generic [ref=e134]:
+          - img [ref=e136]
+          - paragraph [ref=e138]: ผู้ว่าจ้างและผู้รับเหมาขาดการสื่อสารที่โปร่งใส
+        - generic [ref=e139]:
+          - img [ref=e141]
+          - paragraph [ref=e143]: ระบบเก็บประวัติสนทนา ใบเสนอราคา และไฟล์สัญญาอย่างเป็นระบบ
+        - generic [ref=e144]:
+          - img [ref=e146]
+          - paragraph [ref=e149]: ราคาวัสดุมีความผันผวนสูง ขาดแหล่งอ้างอิงกลาง
+        - generic [ref=e150]:
+          - img [ref=e152]
+          - paragraph [ref=e154]: Early Warning ตรวจจับสัญญานเตือนภัยก่อนสายเกินแก้
+    - generic [ref=e156]:
+      - generic [ref=e157]:
+        - heading "ตัวชี้วัดความมั่นคงของโครงการ (EVM)" [level=2] [ref=e158]
+        - paragraph [ref=e159]: เราใช้หลักการ Earned Value Management (EVM) เพื่อคำนวณความเสี่ยงของโครงการอย่างมีมาตรฐาน
+      - generic [ref=e160]:
+        - generic [ref=e161]:
+          - img [ref=e163]
+          - heading "CPI — Cost Performance Index" [level=3] [ref=e165]
+          - paragraph [ref=e166]: ดัชนีประสิทธิภาพต้นทุน
+          - generic [ref=e167]:
+            - paragraph [ref=e168]: สูตรคำนวณ
+            - paragraph [ref=e169]: CPI = EV / AC
+          - generic [ref=e170]:
+            - generic [ref=e173]: ≥ 1.0 → อยู่ในงบประมาณ
+            - generic [ref=e176]: < 0.95 → เริ่มมีความเสี่ยง
+            - generic [ref=e179]: < 0.85 → วิกฤตงบเกิน
+        - generic [ref=e180]:
+          - img [ref=e182]
+          - heading "SPI — Schedule Performance Index" [level=3] [ref=e185]
+          - paragraph [ref=e186]: ดัชนีประสิทธิภาพเวลา
+          - generic [ref=e187]:
+            - paragraph [ref=e188]: สูตรคำนวณ
+            - paragraph [ref=e189]: SPI = EV / PV
+          - generic [ref=e190]:
+            - generic [ref=e193]: ≥ 1.0 → การทำงานตรงตามแผน
+            - generic [ref=e196]: < 0.95 → เริ่มล่าช้าสะสม
+            - generic [ref=e199]: < 0.85 → วิกฤตล่าช้ามาก
+        - generic [ref=e200]:
+          - img [ref=e202]
+          - heading "Variance — ค่าความเบี่ยงเบน" [level=3] [ref=e205]
+          - paragraph [ref=e206]: ส่วนต่างระหว่างแผนกับจริง
+          - generic [ref=e207]:
+            - paragraph [ref=e208]: สูตรคำนวณ
+            - paragraph [ref=e209]: Variance = Actual − Planned
+          - generic [ref=e210]:
+            - generic [ref=e213]: ≤ ±10% → ปกติไม่มีปัญหา
+            - generic [ref=e216]: 10–15% → ควรได้รับการเฝ้าระวัง
+            - generic [ref=e219]: "> 15% → วิกฤตต้องแก้ไขด่วน"
+    - generic [ref=e222]:
+      - img [ref=e224]
+      - heading "พร้อมที่จะร่วมมือดูแลความปลอดภัยของโครงการหรือยัง?" [level=2] [ref=e226]
+      - paragraph [ref=e227]: เปิดโอกาสให้ผู้ว่าจ้างและผู้รับเหมาทำงานร่วมกันอย่างเข้าใจ มีประสิทธิภาพ และโปร่งใสมากยิ่งขึ้น ด้วยระบบ RiskGuard
+      - generic [ref=e228]:
+        - link "สมัครใช้งานพอร์ทัลฟรี" [ref=e229] [cursor=pointer]:
+          - /url: /register
+        - link "เข้าสู่ระบบใช้งาน" [ref=e230] [cursor=pointer]:
+          - /url: /login
+    - contentinfo [ref=e231]:
+      - generic [ref=e232]:
+        - generic [ref=e233]:
+          - img [ref=e234]
+          - generic [ref=e236]: RiskGuard
+        - paragraph [ref=e237]: © 2026 RiskGuard Construction Technologies. สงวนลิขสิทธิ์
+        - generic [ref=e238]:
+          - link "นโยบายความเป็นส่วนตัว" [ref=e239] [cursor=pointer]:
+            - /url: "#"
+          - link "ข้อกำหนดการใช้งาน" [ref=e240] [cursor=pointer]:
+            - /url: "#"
+          - link "ติดต่อเรา" [ref=e241] [cursor=pointer]:
+            - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e247] [cursor=pointer]:
+    - img [ref=e248]
