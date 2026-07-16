@@ -14,6 +14,8 @@ class Settings(BaseSettings):
     SECRET_KEY: str = "your-secret-key"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+    SUPABASE_URL: str | None = None
+    SUPABASE_KEY: str | None = None
 
     @property
     def database_file_path(self) -> str:

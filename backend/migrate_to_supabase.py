@@ -73,17 +73,35 @@ def migrate():
             # Clear existing data in PostgreSQL
             pg_cur.execute(f"TRUNCATE TABLE {table} CASCADE")
             
-            # Get columns from the first row
-            columns = list(rows[0].keys())
+            # Get columns from SQLite row and match them with the SQLAlchemy model
+            sqlite_columns = set(rows[0].keys())
+            table_obj = Base.metadata.tables.get(table)
+            columns = []
+            boolean_cols = set()
+            
+            if table_obj is not None:
+                from sqlalchemy import Boolean
+                for col in table_obj.columns:
+                    if col.name in sqlite_columns:
+                        columns.append(col.name)
+                        if isinstance(col.type, Boolean):
+                            boolean_cols.add(col.name)
+            else:
+                columns = list(rows[0].keys())
+
             col_list = ", ".join(columns)
             val_placeholders = ", ".join(["%s"] * len(columns))
-            
             insert_query = f"INSERT INTO {table} ({col_list}) VALUES ({val_placeholders})"
-            
+
             # Insert each row into PostgreSQL
             for row in rows:
-                values = [row[col] for col in columns]
-                # Convert boolean/integer flags if needed
+                values = []
+                for col in columns:
+                    val = row[col]
+                    if col in boolean_cols and val is not None:
+                        # Convert SQLite integer (0/1) to Python boolean (False/True)
+                        val = bool(val)
+                    values.append(val)
                 pg_cur.execute(insert_query, values)
             
             print(f"    - Successfully migrated {len(rows)} rows.")
