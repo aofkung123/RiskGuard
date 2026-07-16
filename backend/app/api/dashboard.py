@@ -54,7 +54,8 @@ def get_project_data(project_id: int):
 
     from datetime import datetime
     try:
-        end_date = datetime.strptime(p["end_date"][:10], "%Y-%m-%d")
+        end_date_str = str(p["end_date"])[:10] if p["end_date"] else ""
+        end_date = datetime.strptime(end_date_str, "%Y-%m-%d")
         days_remaining = (end_date - datetime.now()).days
         if days_remaining < 0:
             days_remaining = 0
@@ -81,7 +82,7 @@ def get_project_data(project_id: int):
     for i, a in enumerate(analytics):
         snapshots.append({
             "week": f"Week {i+1}",
-            "date": a["date"][:10],
+            "date": str(a["date"])[:10] if a["date"] else "",
             "pv": float(a["pv"]),
             "ev": float(a["ev"]),
             "ac": float(a["ac"])
@@ -138,7 +139,7 @@ def get_project_overview(project_id: int = Query(1), authorization: str = Header
     app.close()
     activities = [
         {
-            "date": (r["timestamp"] or "")[:10],
+            "date": str(r["timestamp"] or "")[:10],
             "type": "stage",
             "message": f"{r['stage_name']} - {r['status']}",
             "status": r["status"],
