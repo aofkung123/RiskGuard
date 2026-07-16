@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
 3:I[97367,["/RiskGuard/_next/static/chunks/0lg2vm73cntt5.js","/RiskGuard/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":["$L2",null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"YVVTNK5R2n3SjjxAXhy-B"}
+0:{"rsc":["$","$1","c",{"children":["$L2",null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"to4Oq4fv1-DANb8dme2tr"}
 5:null
 2:E{"digest":"NEXT_REDIRECT;replace;/employer/search;307;"}
