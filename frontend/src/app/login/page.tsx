@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Shield, Mail, Lock, ArrowRight, Loader2, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { apiRequest, errorMessage, saveSession, type UserRole } from '@/lib/api';
 
 interface LoginResponse {
@@ -14,6 +15,7 @@ interface LoginResponse {
 }
 
 export default function LoginPage() {
+  const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState<'employer' | 'contractor'>('employer');
@@ -36,7 +38,7 @@ export default function LoginPage() {
         full_name: data.full_name,
         email: data.email,
       });
-      window.location.href = '/dashboard';
+      router.push('/dashboard');
     } catch (err: unknown) {
       setError(errorMessage(err, 'การเข้าสู่ระบบล้มเหลว'));
     } finally {
