@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from app.core.config import settings
 
 # Support postgres:// to postgresql:// replacement for SQLAlchemy
-db_url = settings.DATABASE_URL
+db_url = settings.DATABASE_URL.strip() if settings.DATABASE_URL else ""
 if db_url.startswith("postgres://"):
     db_url = db_url.replace("postgres://", "postgresql://", 1)
 

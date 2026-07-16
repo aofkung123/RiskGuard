@@ -35,7 +35,7 @@ jobs:
         working-directory: frontend
         env:
           # Replace with your actual deployed FastAPI Backend URL on Render
-          NEXT_PUBLIC_API_URL: https://riskguard-backend.onrender.com
+          NEXT_PUBLIC_API_URL: https://riskguard-so2p.onrender.com
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
